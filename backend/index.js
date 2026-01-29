@@ -15,7 +15,7 @@ app.use(express.json());
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("✅ MongoDB connected"))
+  .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB error:", err));
 
 // test route
@@ -102,5 +102,5 @@ app.get("/api/measurements/metrics", async (req, res) => {
 
 // start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
