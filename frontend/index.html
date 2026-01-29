@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Time-Series Analytics</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Time-Series Analytics Platform</h1>
+
+    <div class="controls">
+      <label>
+        Field:
+        <select id="field">
+          <option value="field1">Field 1</option>
+          <option value="field2">Field 2</option>
+          <option value="field3">Field 3</option>
+        </select>
+      </label>
+
+      <label>
+        Start date:
+        <input type="date" id="startDate" />
+      </label>
+
+      <label>
+        End date:
+        <input type="date" id="endDate" />
+      </label>
+
+      <button id="loadBtn">Load data</button>
+    </div>
+
+    <canvas id="chart"></canvas>
+
+    <div class="metrics">
+      <h2>Metrics</h2>
+      <p>Average: <span id="avg">-</span></p>
+      <p>Min: <span id="min">-</span></p>
+      <p>Max: <span id="max">-</span></p>
+      <p>Std Dev: <span id="std">-</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

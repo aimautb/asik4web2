@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.controls button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+canvas {
+  margin-top: 20px;
+}
+
+.metrics {
+  margin-top: 20px;
+  background: #f0f3f6;
+  padding: 15px;
+  border-radius: 6px;
+}
+.metrics h2 {
+  margin-top: 0;
+}
+.metrics ul {
+  list-style: none;
+  padding: 0;
+}
+.metrics ul li {
+  margin-bottom: 8px;
+}
+.metrics ul li span {
+  font-weight: bold;
+}
