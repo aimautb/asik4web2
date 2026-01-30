@@ -8,24 +8,21 @@ const Measurement = require("./models/Measurement");
 const app = express();
 const PORT = 3000;
 
-// middlewares
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB error:", err));
 
-// test route
+
 app.get("/", (req, res) => {
   res.send("API is running");
 });
 
-/**
- * GET time-series data
- */
+
 app.get("/api/measurements", async (req, res) => {
   try {
     const { field, start_date, end_date } = req.query;
@@ -57,9 +54,7 @@ app.get("/api/measurements", async (req, res) => {
   }
 });
 
-/**
- * GET metrics
- */
+
 app.get("/api/measurements/metrics", async (req, res) => {
   try {
     const { field, start_date, end_date } = req.query;
@@ -100,7 +95,7 @@ app.get("/api/measurements/metrics", async (req, res) => {
   }
 });
 
-// start server
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
